@@ -1,0 +1,86 @@
+
+.titulo_planilha {
+     font-size: 30px;
+     font-weight: bold;
+
+}
+table {
+    border-collapse: collapse;  
+    border: 1px solid rgb(100, 130, 40);
+    width:80%;
+    font-family: sans-serif;
+    font-size: 18px; 
+} 
+
+
+td {
+    border-collapse: collapse;
+    border: 1px solid rgb(100, 130, 40);
+    
+}
+
+.coluna1 {
+     width: 2%;
+     text-align: center;
+}
+
+.coluna2 {
+    width: 96%;
+}
+
+.coluna3 {
+    width: 2%;
+}
+
+.resposta {
+    width: 90px;
+    border: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    
+}   
+
+body {
+    background: #F0FFFF;
+}
+
+
+.botao {
+   padding-top: 10px;
+}
+
+
+  .bota_resultado {
+    background-color: #f80a0a; /* Green */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 50px;
+    margin-left: 30% ;
+    border-radius: 10px;
+    width: 800px;
+    height: 100px;    
+}
+
+.bota_resultado:hover {background-color: #f80a0a}
+
+
+.bota_resultado:active {
+    background-color: #f80a0a;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+ .resposta:focus-visible {
+     outline: 5px solid #F00;
+
+ } 
+
+  .focus {
+    background: rgb(231, 231, 76);
+}
