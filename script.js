@@ -203,6 +203,7 @@ function insereTabela() {
  }
 
  function removeResultado() {
+     
     let body = document.getElementById('Tabela_resultado') 
     if (body != null){ 
       body.remove();  
