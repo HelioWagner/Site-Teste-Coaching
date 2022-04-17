@@ -23,13 +23,20 @@ function desenharGraficos (){
     let opcoes = {
 
                               title: 'RESULTADO TESTE ÂNCORA',
-                              width: 1000,
+                              width: 800,
                               height: 700, 
+                              curveType: 'function',
+                              pointSize: 20,
+                              legend: 'none',
+                              bar: {groupWidth: '95%'},
                               backgroundColor: {stroke:'black', fill:'#D3D3D3',
                                                 strokeSize: 1}, 
-                              vAxis: {gridlines:{color:'transparent'},
-                                    format: 'percent',
-                                    title:'Resultado'},
+                             //explorer:{maxZoomOut: 2},
+                              vAxis: {gridlines:{color:'transparent',count: 2},
+                              format: "percent",
+                             // gridlines: { count: 2 } 
+                                   // title:'teste'
+                                },
                              // hAxis: { title:'Mês'}
                         
                 }    
@@ -54,6 +61,10 @@ let estiloVida
 let indicesTabela = []  
 
 function Resultado_Avaliacao() {
+    indicesTabela = [] 
+    for (let i = indicesTabela.length; i > 0; i--) {
+        indicesTabela.pop();
+      }
     competenciaTecFuncional   = 0;
     competenciaAdmGeral       = 0; 
     autonomiaIndependencia    = 0; 
@@ -71,6 +82,13 @@ function Resultado_Avaliacao() {
         if (resposta.value === ''){ 
             resposta.focus();
             alert('Deve ser informado todos os campo para obter Resultado da Avaliação.')
+            return;
+
+        }
+
+        if (resposta.value > 6){ 
+            resposta.focus();
+            alert('Deve ser informado valor 1 a 6 nos campo para obter Resultado da Avaliação.')
             return;
 
         }
@@ -109,7 +127,7 @@ function Resultado_Avaliacao() {
         
      }
 
-    // console.log(competenciaTecFuncional+' '+(competenciaTecFuncional/36)*100)
+     console.log(indicesTabela);   
      competenciaTecFuncional   = Math.round((competenciaTecFuncional/36)*100);  
      //insereTag('Competência técnico-funcional: '+competenciaTecFuncional+'%')
      
@@ -141,6 +159,7 @@ function Resultado_Avaliacao() {
      indicesTabela.push(["F","Dedicação a uma causa",dedicacaoCausa])
      indicesTabela.push(["G","Desafio puro",desafioPuro])
      indicesTabela.push(["H","Estilo de vida",estiloVida])
+     removeResultado();
      insereTabela(indicesTabela)
      google.charts.setOnLoadCallback(desenharGraficos);
     // console.log(competenciaTecFuncional);    
@@ -158,9 +177,9 @@ function insereTag(conteudo) {
 
 
 function insereTabela() {
-  let tabela = document.getElementById('tabela')    
-  let tbody  = Tag("tbody")
-  let tr
+  let tabela  = document.getElementById('tabela')    
+  let tbody   = Tag("tbody")
+      tbody.id = "Tabela_resultado"
   let td
   let linhaBody 
   //console.log(indicesTabela)
@@ -181,6 +200,13 @@ function insereTabela() {
       tbody.appendChild(linhaBody)
   }  
   tabela.appendChild(tbody)
+ }
+
+ function removeResultado() {
+    let body = document.getElementById('Tabela_resultado') 
+    if (body != null){ 
+      body.remove();  
+    }
  }
 
  function Tag(elemento){
