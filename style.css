@@ -47,18 +47,17 @@ body {
     background: #F0FFFF;
 }
 
-#graficoPizza
+#grafico
 {
-  font-size: 12px;
-  color: #4c4b4b;
-  margin-top: 20px;
-  margin-left: 15%;
-  align-items: center;
-  position: relative;
+  display: flex;  
+  margin-top: 10px;
+  justify-content: center;
+
 }
 
 .botao {
-   padding-top: 10px;   
+   padding-top: 10px; 
+   padding-bottom: 10px;  
 }
 
 

@@ -1,48 +1,83 @@
 google.charts.load('current', {'packages':['corechart'],'language':'pt'});
 
+const inputs = document.querySelectorAll('.resposta')
+
+inputs.forEach (input => {
+    input.addEventListener('blur', (evento) => {
+    //  console.log(evento.target.value)
+      if (evento.target.value != ""){
+        if ((evento.target.value > 6)||(evento.target.value < 1)) {
+            evento.target.value = ""  
+            evento.target.focus()          
+            alert("Deve ser informado valor entrar 1 e 6")
+           
+        }
+    }  
+      
+    })
+   
+})
 
 function desenharGraficos (){
     var tabela = new google.visualization.DataTable();
     tabela.addColumn('string','categorias');
-    tabela.addColumn('number','Resultado %');
-    tabela.addColumn({type: 'number', role: 'annotation'});
+    tabela.addColumn('number','Resultado');
+   // tabela.addColumn({type: 'number', role: 'annotation'});
     tabela.addColumn({type: 'string', role: 'style'});
     tabela.addRows([
      
-        ['Competência técnico-funcional',competenciaTecFuncional,competenciaTecFuncional,'blue'],
-        ['Competência administrativa geral',competenciaAdmGeral,competenciaAdmGeral,'opacity: 0.5; color: red'],
-        ['Autonomia e independência',autonomiaIndependencia,autonomiaIndependencia,'red'],
-        ['Segurança e estabilidade',segurancaEstabilidade,segurancaEstabilidade,'aqua'],
-        ['Criatividade empreendedora',criatividadeEmpreendedora,criatividadeEmpreendedora,'#8904B1'],
-        ['Dedicação a uma causa',dedicacaoCausa,dedicacaoCausa,'green'],
-        ['Desafio puro',desafioPuro,desafioPuro,'yellow'],
-        ['Estilo de vida',estiloVida,estiloVida,'rebeccapurple']
+        ['Comp. técnico-funcional',{v:competenciaTecFuncional , f:competenciaTecFuncional+'%'},'blue'],
+        ['Competência administrativa geral',{v:competenciaAdmGeral, f:competenciaAdmGeral+'%'},'opacity: 0.5; color: red'],
+        ['Autonomia e independência',{v:autonomiaIndependencia , f:autonomiaIndependencia+'%'},'red'],
+        ['Segurança e estabilidade',{v:segurancaEstabilidade, f:segurancaEstabilidade+'%'},'aqua'],
+        ['Criatividade empreendedora',{v:criatividadeEmpreendedora, f:criatividadeEmpreendedora+'%'},'#8904B1'],
+        ['Dedicação a uma causa',{v:dedicacaoCausa, f:dedicacaoCausa+'%'},'green'],
+        ['Desafio puro',{v:desafioPuro, f:desafioPuro+'%'},'yellow'],
+        ['Estilo de vida',{v:estiloVida, f: estiloVida+'%'},'rebeccapurple']
     ]);
-
+    var formatter = new google.visualization.ArrowFormat();
+    formatter.format(tabela, 1);
     
     let opcoes = {
 
                               title: 'RESULTADO TESTE ÂNCORA',
-                              width: 800,
-                              height: 700, 
-                              curveType: 'function',
-                              pointSize: 20,
+                              width: 700,
+                              height: 700,          
+                              annotations: {
+                                textStyle: {
+                                  fontName: 'Times-Roman',
+                                  fontSize: 2,
+                                  bold: true,
+                                  italic: true,
+                                  // The color of the text.
+                                  color: '#871b47',
+                                  // The color of the text outline.
+                                  auraColor: '#d799ae',
+                                  // The transparency of the text.
+                                  opacity: 0.8
+                                }
+                              },                   
+                              //curveType: 'function',
+                              isStacked: 'absolute',
                               legend: 'none',
-                              bar: {groupWidth: '95%'},
-                              backgroundColor: {stroke:'black', fill:'#D3D3D3',
+                              bar: {groupWidth: '90%'},
+                              backgroundColor: {stroke:'black', fill:'white',
                                                 strokeSize: 1}, 
                              //explorer:{maxZoomOut: 2},
-                              vAxis: {gridlines:{color:'transparent',count: 2},
-                              format: "percent",
-                             // gridlines: { count: 2 } 
-                                   // title:'teste'
+                              hAxis: {gridlines: {count:0},
+                              format: "#,##0%",
+                              isStacked: 'percent',
+                              minValue: 0,
+                              maxValue: 100,
+                              ticks: [0, 10, 20, 30, 60,80,100],
+                          
                                 },
                              // hAxis: { title:'Mês'}
                         
                 }    
                                 
        
-    let grafico = new google.visualization.ColumnChart(document.getElementById('graficoPizza'));
+    let grafico = new google.visualization.ColumnChart(document.getElementById('grafico'));
     grafico.draw(tabela,opcoes);  
 
 
