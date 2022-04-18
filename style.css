@@ -32,10 +32,7 @@ td {
     width: 2%;
 }
 
-.resposta {
-    width: 90px;
-    border: none;
-}
+
 
 main {
     display: flex;
@@ -94,7 +91,12 @@ body {
         border-radius: 10px;
         width: 600px;
         height: 100px;     
-    }   
+    }  
+    
+    .resposta {
+        width: 90px;
+        border: none;
+    }
  
 }
 
@@ -112,6 +114,12 @@ body {
         border-radius: 10px;
         width: 150px;
         height: 80px;   
-    }   
+    }  
+    
+    .resposta {
+        width: 90px;
+        height: 60px;
+        border: none;
+    }
  
 }
