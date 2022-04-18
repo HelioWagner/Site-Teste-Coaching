@@ -77,7 +77,7 @@ body {
 }
 
 
-@media (min-width: 1001px) 
+@media (min-width: 901px) 
 {
     .bota_resultado {
         background-color: #f80a0a; /* Green */
@@ -100,7 +100,7 @@ body {
  
 }
 
-@media (min-width: 100px) and (max-width: 1000px)
+@media (min-width: 100px) and (max-width: 900px)
 {
     .bota_resultado {
         background-color: #f80a0a; /* Green */
