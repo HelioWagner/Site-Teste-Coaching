@@ -44,13 +44,6 @@ body {
     background: #F0FFFF;
 }
 
-#grafico
-{
-  display: flex;  
-  margin-top: 10px;
-  justify-content: center;
-
-}
 
 .botao {
    padding-top: 10px; 
@@ -97,6 +90,16 @@ body {
         width: 90px;
         border: none;
     }
+
+
+    #grafico
+    {
+      display: flex;  
+      margin-top: 10px;
+      justify-content: center;
+    
+    }
+
  
 }
 
@@ -121,5 +124,14 @@ body {
         height: 60px;
         border: none;
     }
+
+    
+        #grafico
+        {
+        display: flex;  
+        margin-top: 10px;
+       
+
+        }
  
 }
