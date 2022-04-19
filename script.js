@@ -74,7 +74,7 @@ function desenharGraficos (){
     //                             },
     //                          // hAxis: { title:'Mês'}
                         
-    //             }    
+    //             }     
     var opcoes = {
         title: 'RESULTADO TESTE ÂNCORA',
         height: 400,
