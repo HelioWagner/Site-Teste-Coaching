@@ -51,11 +51,11 @@ body {
 }
 
 
-.bota_resultado:hover {background-color: #f80a0a}
+.bota_resultado:hover {background-color: green}
 
 
 .bota_resultado:active {
-    background-color: #f80a0a;
+    background-color: green;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
@@ -109,15 +109,14 @@ body {
         background-color: #f80a0a; /* Green */
         color: white;
         padding: 15px 32px;
-        text-align: center;
-        
+        text-align: center;        
         text-decoration: none;
         display: inline-block;
         font-size: 20px;
-        margin-left: 30% ;
+        margin-left: 15% ;
         border-radius: 10px;
-        width: 150px;
-        height: 80px;   
+        width: 260px;
+        height: 50px;   
     }  
     
     .resposta {

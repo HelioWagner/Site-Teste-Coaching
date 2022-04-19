@@ -1,6 +1,7 @@
 google.charts.load('current', {'packages':['corechart'],'language':'pt'});
 
 const inputs = document.querySelectorAll('.resposta')
+inputs[0].focus()
 
 inputs.forEach (input => {
     input.addEventListener('blur', (evento) => {
@@ -37,48 +38,11 @@ function desenharGraficos (){
     ]);
     var formatter = new google.visualization.ArrowFormat();
     formatter.format(tabela, 1);
-    
-    // let opcoes = {
-
-    //                           title: 'RESULTADO TESTE ÂNCORA',
-    //                           width: 500,
-    //                           height: 700,          
-    //                           annotations: {
-    //                             textStyle: {
-    //                               fontName: 'Times-Roman',
-    //                               fontSize: 2,
-    //                               bold: true,
-    //                               italic: true,
-    //                               // The color of the text.
-    //                               color: '#871b47',
-    //                               // The color of the text outline.
-    //                               auraColor: '#d799ae',
-    //                               // The transparency of the text.
-    //                               opacity: 0.8
-    //                             }
-    //                           },                   
-    //                           //curveType: 'function',
-    //                           isStacked: 'absolute',
-    //                           legend: 'none',
-    //                           //bar: {groupWidth: '90%'},
-    //                          // backgroundColor: {stroke:'black', fill:'white',
-    //                          //                   strokeSize: 1}, 
-    //                          //explorer:{maxZoomOut: 2},
-    //                           hAxis: {gridlines: {count:0},
-    //                           format: "#,##0%",
-    //                           isStacked: 'percent',
-    //                           minValue: 0,
-    //                           maxValue: 100,
-    //                           ticks: [0, 10, 20, 30, 60,80,100],
-                          
-    //                             },
-    //                          // hAxis: { title:'Mês'}
-                        
-    //             }     
+      
     var opcoes = {
         title: 'RESULTADO TESTE ÂNCORA',
         height: 400,
-        width: 500,
+        width: 480,
         isStacked: 'absolute',
         bar: {groupWidth: '90%'},
         vAxis: { gridlines: {count:0},
@@ -174,7 +138,7 @@ function Resultado_Avaliacao() {
         
      }
 
-     console.log(indicesTabela);   
+     //console.log(indicesTabela);   
      competenciaTecFuncional   = Math.round((competenciaTecFuncional/36)*100);  
      //insereTag('Competência técnico-funcional: '+competenciaTecFuncional+'%')
      
@@ -198,14 +162,14 @@ function Resultado_Avaliacao() {
 
      estiloVida                = Math.round((estiloVida/36)*100);
      //insereTag('Estilo de vida: '+estiloVida+'%')
-     indicesTabela.push(["A","Competência técnico-funcional",competenciaTecFuncional])
-     indicesTabela.push(["B","Competência administrativa geral",competenciaAdmGeral])
-     indicesTabela.push(["C","Autonomia e independência",autonomiaIndependencia])
-     indicesTabela.push(["D","Segurança e estabilidade",segurancaEstabilidade])
-     indicesTabela.push(["E","Criatividade empreendedora",criatividadeEmpreendedora])
-     indicesTabela.push(["F","Dedicação a uma causa",dedicacaoCausa])
-     indicesTabela.push(["G","Desafio puro",desafioPuro])
-     indicesTabela.push(["H","Estilo de vida",estiloVida])
+     indicesTabela.push(["A","Competência técnico-funcional",competenciaTecFuncional+'%'])
+     indicesTabela.push(["B","Competência administrativa geral",competenciaAdmGeral+'%'])
+     indicesTabela.push(["C","Autonomia e independência",autonomiaIndependencia+'%'])
+     indicesTabela.push(["D","Segurança e estabilidade",segurancaEstabilidade+'%'])
+     indicesTabela.push(["E","Criatividade empreendedora",criatividadeEmpreendedora+'%'])
+     indicesTabela.push(["F","Dedicação a uma causa",dedicacaoCausa+'%'])
+     indicesTabela.push(["G","Desafio puro",desafioPuro+'%'])
+     indicesTabela.push(["H","Estilo de vida",estiloVida+'%'])
      removeResultado();
      insereTabela(indicesTabela)
      google.charts.setOnLoadCallback(desenharGraficos);
