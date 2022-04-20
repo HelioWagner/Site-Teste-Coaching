@@ -5,20 +5,19 @@ inputs[0].focus()
 
 inputs.forEach (input => {
     input.addEventListener('blur', (evento) => {
-    //  console.log(evento.target.value)
       if (evento.target.value != ""){
         if ((evento.target.value > 6)||(evento.target.value < 1)) {
             evento.target.value = ""  
             evento.target.focus()          
-            alert("Deve ser informado valor entrar 1 e 6")
+            alert("Deve ser informado valor entre 1 e 6")
            
         }
-        //console.log(evento.target.value)
+        //verifico se informação é alfanumérico
         var regex = /^[0-9.]+$/;
         if( !regex.test(evento.target.value) ) {
             evento.target.value = ""  
             evento.target.focus()          
-            alert("Deve ser informado valor entrar 1 e 6")
+            alert("Deve ser informado valor entre 1 e 6")
           }
 
     }  
@@ -110,11 +109,7 @@ function Resultado_Avaliacao() {
             alert('Deve ser informado valor 1 a 6 nos campo para obter Resultado da Avaliação.')
             return;
 
-        }
-        // if (resposta.classList[1] = 'competenciaTecFuncional') {
-        //     console.log( resposta.value)
-        // }
-        
+        }        
 
         switch (resposta.classList[1]) {
             case 'competenciaTecFuncional' :
@@ -147,29 +142,14 @@ function Resultado_Avaliacao() {
      }
 
      //console.log(indicesTabela);   
-     competenciaTecFuncional   = Math.round((competenciaTecFuncional/36)*100);  
-     //insereTag('Competência técnico-funcional: '+competenciaTecFuncional+'%')
-     
-     competenciaAdmGeral       = Math.round((competenciaAdmGeral/36)*100);
-    // insereTag('Competência administrativa geral: '+competenciaAdmGeral+'%')
-     
+     competenciaTecFuncional   = Math.round((competenciaTecFuncional/36)*100);
+     competenciaAdmGeral       = Math.round((competenciaAdmGeral/36)*100);     
      autonomiaIndependencia    = Math.round((autonomiaIndependencia/36)*100);
-    // insereTag('Autonomia e independência: '+autonomiaIndependencia+'%')
-
      segurancaEstabilidade     = Math.round((segurancaEstabilidade/36)*100);
-    // insereTag('Segurança e estabilidade: '+segurancaEstabilidade+'%')
-
      criatividadeEmpreendedora = Math.round((criatividadeEmpreendedora/36)*100);
-    // insereTag('Criatividade empreendedora: '+criatividadeEmpreendedora+'%')
-
      dedicacaoCausa            = Math.round((dedicacaoCausa/36)*100);
-    // insereTag('Dedicação a uma causa: '+dedicacaoCausa+'%')
-
      desafioPuro               = Math.round((desafioPuro/36)*100);
-    // insereTag('Desafio puro: '+desafioPuro+'%')
-
      estiloVida                = Math.round((estiloVida/36)*100);
-     //insereTag('Estilo de vida: '+estiloVida+'%')
      indicesTabela.push(["A","Competência técnico-funcional",competenciaTecFuncional+'%'])
      indicesTabela.push(["B","Competência administrativa geral",competenciaAdmGeral+'%'])
      indicesTabela.push(["C","Autonomia e independência",autonomiaIndependencia+'%'])
@@ -178,10 +158,11 @@ function Resultado_Avaliacao() {
      indicesTabela.push(["F","Dedicação a uma causa",dedicacaoCausa+'%'])
      indicesTabela.push(["G","Desafio puro",desafioPuro+'%'])
      indicesTabela.push(["H","Estilo de vida",estiloVida+'%'])
+     //Montra o resultado da avaliação
      removeResultado();
      insereTabela(indicesTabela)
-     google.charts.setOnLoadCallback(desenharGraficos);
-    // console.log(competenciaTecFuncional);    
+     //monta o gráfico baseado nas resposta
+     google.charts.setOnLoadCallback(desenharGraficos);   
 }
 
 function insereTag(conteudo) {
@@ -189,8 +170,6 @@ function insereTag(conteudo) {
      const result_teste = document.querySelector(".result_teste")     
      p.classList.add("resultado_teste")
      p.innerText = conteudo
-    // console.log(p)
-     //console.log(conteudo)
      result_teste.insertAdjacentElement("beforeend",p)
 }
 
@@ -201,13 +180,8 @@ function insereTabela() {
       tbody.id = "Tabela_resultado"
   let td
   let linhaBody 
-  //console.log(indicesTabela)
- // td = Tag("td")
- // td.textContent = indicesTabela[0][0]
- // linhaBody.appendChild(td)
   for (let i =0; i <indicesTabela.length; i++ ) {
       linhaBody = Tag("tr")   
-     // linhaBody.appendChild(td)  
       for (let index = 0; index < indicesTabela[i].length; index++) {
           td = Tag("td")
           if (index === 1) {
