@@ -13,6 +13,14 @@ inputs.forEach (input => {
             alert("Deve ser informado valor entrar 1 e 6")
            
         }
+        //console.log(evento.target.value)
+        var regex = /^[0-9.]+$/;
+        if( !regex.test(evento.target.value) ) {
+            evento.target.value = ""  
+            evento.target.focus()          
+            alert("Deve ser informado valor entrar 1 e 6")
+          }
+
     }  
       
     })
