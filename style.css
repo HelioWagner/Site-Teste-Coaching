@@ -159,6 +159,8 @@ body {
     .resposta {
         width: 90px;
         height: 60px;
+        font-size: 18px;
+        text-align: center;
         border: none;
     }
 
