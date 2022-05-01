@@ -1,16 +1,12 @@
 
-.titulo_planilha {
-     font-size: 30px;
-     font-weight: bold;
-
-}
 table {
     border-collapse: collapse;  
     border: 1px solid rgb(100, 130, 40);
-    width:80%;
-    font-family: sans-serif;
+    width:80%;    
     font-size: 18px; 
 } 
+
+
 
 
 td {
@@ -41,7 +37,10 @@ main {
 }   
 
 body {
-    background: #F0FFFF;
+    /* background: #F0FFFF;    */
+  
+    background: #F0FFFF;  
+    font-family: sans-serif;
 }
 
 
@@ -70,6 +69,10 @@ body {
 }
 
 
+
+
+
+
 @media (min-width: 901px) 
 {
     .bota_resultado {
@@ -88,7 +91,10 @@ body {
     
     .resposta {
         width: 90px;
+        font-size: 18px;
+        text-align: center;
         border: none;
+     
     }
 
 
@@ -99,6 +105,37 @@ body {
       justify-content: center;
     
     }
+
+    .cabecalho_conteudo{
+        width:80%;  
+        display: flex;  
+        justify-content: space-between;
+        background: white;
+      } 
+      
+.cabecalho {
+        display: flex;
+        justify-content: center; 
+}
+          
+
+.cabecalho_texto {
+   border-collapse: collapse;  
+   font-size: 30px;
+   font-weight: bold;
+   text-align: center;
+
+}
+
+.cabecalho_logo {
+    height: 110px; 
+}
+
+.cabecalho_ancora {
+
+    height: 110px;  
+}
+
 
  
 }
@@ -125,6 +162,31 @@ body {
         border: none;
     }
 
+    .cabecalho_conteudo{
+        width:80%;  
+        display: flex;  
+        justify-content: space-between;
+        background: white;
+        height: 80px;
+      }    
+
+
+    .cabecalho_texto {
+        border-collapse: collapse;  
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+     }
+
+     .cabecalho {
+        display: flex;
+        justify-content: center; 
+        height: 40px;
+    }
+    
+     .imagem_cabecalho {
+         height: 40px;
+     }
     
         #grafico
         {
