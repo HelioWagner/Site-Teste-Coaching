@@ -1,0 +1,29 @@
+body {
+    font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+  }
+
+.cabecalho__logo
+{
+    height: 150px; 
+}
+
+.cabecalho__logo__principal {
+    width: 100vW;
+    height: 150px; 
+}
+
+.cabecalho__menu__nav {
+    
+    text-align: center;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.cabecalho__menu__nav__lista a {
+    margin-right: 22px;
+    /* color: white; */
+}
+
+.cabecalho__menu__nav__lista a:hover {
+    color: black;
+} 

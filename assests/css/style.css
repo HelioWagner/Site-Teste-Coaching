@@ -1,0 +1,201 @@
+
+table {
+    border-collapse: collapse;  
+    border: 1px solid rgb(100, 130, 40);
+    width:80%;    
+    font-size: 18px; 
+} 
+
+
+
+
+td {
+    border-collapse: collapse;
+    border: 1px solid rgb(100, 130, 40);
+    
+}
+
+.coluna1 {
+     width: 2%;
+     text-align: center;
+}
+
+.coluna2 {
+    width: 96%;
+}
+
+.coluna3 {
+    width: 2%;
+}
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    
+}   
+
+body {
+    /* background: #F0FFFF;    */
+  
+    background: #F0FFFF;  
+    font-family: sans-serif;
+}
+
+
+.botao {
+   padding-top: 10px; 
+   padding-bottom: 10px;  
+}
+
+
+.bota_resultado:hover {background-color: green}
+
+
+.bota_resultado:active {
+    background-color: green;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+ .resposta:focus-visible {
+     outline: 5px solid #F00;
+
+ } 
+
+  .focus {
+    background: rgb(231, 231, 76);
+}
+
+
+
+
+
+
+@media (min-width: 901px) 
+{
+    .bota_resultado {
+        background-color: #f80a0a; /* Green */
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 50px;
+        margin-left: 30% ;
+        border-radius: 10px;
+        width: 600px;
+        height: 100px;     
+    }  
+    
+    .resposta {
+        width: 90px;
+        font-size: 18px;
+        text-align: center;
+        border: none;
+     
+    }
+
+
+    #grafico
+    {
+      display: flex;  
+      margin-top: 10px;
+      justify-content: center;
+    
+    }
+
+    .cabecalho_conteudo{
+        width:80%;  
+        display: flex;  
+        justify-content: space-between;
+        background: white;
+      } 
+      
+.cabecalho {
+        display: flex;
+        justify-content: center; 
+}
+          
+
+.cabecalho_texto {
+   border-collapse: collapse;  
+   font-size: 30px;
+   font-weight: bold;
+   text-align: center;
+
+}
+
+.cabecalho_logo {
+    height: 110px; 
+}
+
+.cabecalho_ancora {
+
+    height: 110px;  
+}
+
+
+ 
+}
+
+@media (min-width: 100px) and (max-width: 900px)
+{
+    .bota_resultado {
+        background-color: #f80a0a; /* Green */
+        color: white;
+        padding: 10px 20px;
+        text-align: center;        
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin-left: 15% ;
+        border-radius: 10px;
+        width: 260px;
+        height: 50px;   
+    }  
+    
+    .resposta {
+        width: 90px;
+        height: 60px;
+        font-size: 18px;
+        text-align: center;
+        border: none;
+    }
+
+    .cabecalho_conteudo{
+        width:80%;  
+        display: flex;  
+        justify-content: space-between;
+        background: white;
+        height: 40px;
+      }    
+
+
+    .cabecalho_texto {
+        border-collapse: collapse;  
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+     }
+
+     .cabecalho {
+        display: flex;
+        justify-content: center; 
+        height: 40px;
+    }
+    
+     .imagem_cabecalho {
+         height: 40px;
+     }
+    
+        #grafico
+        {
+        display: flex;  
+        margin-top: 10px;
+       
+
+        }
+ 
+}
