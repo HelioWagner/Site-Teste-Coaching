@@ -4,252 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assests/css/reset.css">
+    <link rel="stylesheet" href="/assests/css/style_index.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <title>Teste Âncora</title>
+    <title>Site Coachinng Marcus</title>
 </head>
 <body>
-    <header class="cabecalho">
-        <div class="cabecalho_conteudo">
-        <div class="cabecalho_logo">
-            <img class="imagem_cabecalho" src="https://github.com/HelioWagner/Site-Teste-Coaching/blob/9eb891b6c425ec12e56d950581d6992a91941f66/assests/img/logo.jpg?raw=true" alt="logo">  
+    <header class="cabecalho">        
+        <div class="cabecalho__menu">
+            <nav class="cabecalho__menu__nav">
+                <ul>
+                    <li class="cabecalho__menu__nav__lista">
+                        <a href="kitchen.html">PRINCIPAL</a>
+                        <a href="ancora_apresentacao.html">TESTES</a>
+                        <a href="contato.html">CONTATO</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="cabecalho__menu__botoes">
+                <a href="https://instagram.com/dragoesaracatuba?utm_medium=copy_link"><i
+                        class="fa-brands fa-instagram-square"></i></a>
+                <a href="www.google.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.youtube.com/watch?v=_BPwGlywVqs"><i class="fa-brands fa-youtube"></i></a>
+            </div>
         </div>
-        <div class="cabecalho_texto">
-            <p class="titulo_planilha">TESTE ÂNCORA</p>
-        </div>
-        <div class="cabecalho_ancora">
-            <img class="imagem_cabecalho" src="https://github.com/HelioWagner/Site-Teste-Coaching/blob/9eb891b6c425ec12e56d950581d6992a91941f66/assests/img/ancora.jpg?raw=true" alt="logo">   
-        </div>
-       </div> 
-       
-    </header> 
-    <main >
-            <table>                  
-                <thead>              
-                    <th colspan="2"></th>
-                    <th>Resposta</th>  
-                </thead>           
-                <tbody id="questionario">
-                        <tr>
-                            <td class="coluna1">1</td>
-                            <td class="coluna2">Sonho em ser tão bom no que faço que minha opinião de especialista seja sempre solicitada.</td>
-                            <td class="coluna3"><input class="resposta competenciaTecFuncional" maxlength="1"  type="text"onkeypress="onlynumber();"> </td>                      
-                        </tr>
-                        <tr>
-                            <td class="coluna1">2</td>
-                            <td class="coluna2">Me sinto mais realizado em meu trabalho quando sou capaz de integrar e gerenciar o trabalho dos outros.</td>
-                            <td class="coluna3"><input class="resposta competenciaAdmGeral" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">3</td>
-                            <td class="coluna2">Sonho em ter uma carreira que me dê a liberdade de fazer o trabalho do meu jeito e no tempo por mim programado.</td>
-                            <td class="coluna3"><input class="resposta autonomiaIndependencia" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">4</td>
-                            <td class="coluna2">Segurança e estabilidade são mais importantes para mim do que liberdade e autonomia.</td>
-                            <td class="coluna3"><input class="resposta segurancaEstabilidade" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">5</td>
-                            <td class="coluna2">Estou sempre procurando ideias que me permitam iniciar meu próprio negócio.</td>
-                            <td class="coluna3"><input class="resposta criatividadeEmpreendedora" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">6</td>
-                            <td class="coluna2">Sentirei sucesso na minha carreira se sentir que contribuí verdadeiramente para o bem estar da sociedade.</td>
-                            <td class="coluna3"><input class="resposta dedicacaoCausa" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">7</td>
-                            <td class="coluna2">Sonho com uma carreira na qual eu possa solucionar problemas ou vencer em situações extremamente desafiadoras.</td>
-                            <td class="coluna3"><input class="resposta desafioPuro" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">8</td>
-                            <td class="coluna2">Prefiro deixar meu emprego a ser colocado em um trabalho que comprometa minha capacidade de satisfazer meus interesses pessoais e familiares.</td>
-                            <td class="coluna3"><input class="resposta estiloVida" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">9</td>
-                            <td class="coluna2">Só me sentirei bem-sucedido em minha carreira se puder desenvolver minhas habilidades técnicas e funcionais até o mais alto nível de competência.</td>
-                            <td class="coluna3"><input class="resposta competenciaTecFuncional" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">10</td>
-                            <td class="coluna2">Sonho em dirigir uma organização complexa e tomar decisões que afetem muitas pessoas.</td>
-                            <td class="coluna3"><input class="resposta competenciaAdmGeral" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">11</td>
-                            <td class="coluna2">Me sinto mais realizado em meu trabalho quando tenho total liberdade de definir minhas próprias tarefas, horários e procedimentos.</td>
-                            <td class="coluna3"><input class="resposta autonomiaIndependencia" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">12</td>
-                            <td class="coluna2">Prefiro manter minha atividade atual a aceitar outra tarefa que possa colocar em risco minha segurança na empresa.</td>
-                            <td class="coluna3"><input class="resposta segurancaEstabilidade" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">13</td>
-                            <td class="coluna2">Montar meu próprio negócio é mais importante para mim do que atingir uma alta posição gerencial como funcionário.</td>
-                            <td class="coluna3"><input class="resposta criatividadeEmpreendedora" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">14</td>
-                            <td class="coluna2">Me sinto mais realizado em minha carreira quando posso utilizar meus talentos a serviço dos outros.</td>
-                            <td class="coluna3"><input class="resposta dedicacaoCausa" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">15</td>
-                            <td class="coluna2">Me sinto realizado em minha carreira apenas quando enfrento e supero desafios extremamente difíceis.</td>
-                            <td class="coluna3"><input class="resposta desafioPuro" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">16</td>
-                            <td class="coluna2">Sonho com uma carreira que me permita integrar minhas necessidades pessoais, familiares e de trabalho.</td>
-                            <td class="coluna3"><input class="resposta estiloVida" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">17</td>
-                            <td class="coluna2">Me tornar um gerente técnico em minha área de especialização é mais atraente para mim do que me tornar um gerente geral em alguma organização.</td>
-                            <td class="coluna3"><input class="resposta competenciaTecFuncional" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">18</td>
-                            <td class="coluna2">Me sentirei bem-sucedido em minha carreira apenas quando me tornar um gerente geral em alguma organização.</td>
-                            <td class="coluna3"><input class="resposta competenciaAdmGeral" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">19</td>
-                            <td class="coluna2">Me sentirei bem-sucedido em minha carreira apenas quando alcançar total autonomia e liberdade.</td>
-                            <td class="coluna3"><input class="resposta autonomiaIndependencia" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">20</td>
-                            <td class="coluna2">Procuro trabalhos em organizações que me deem senso de segurança e estabilidade.</td>
-                            <td class="coluna3"><input class="resposta segurancaEstabilidade" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">21</td>
-                            <td class="coluna2">Me sinto realizado em minha carreira quando sou capaz de construir alguma coisa que seja inteiramente resultado de minhas ideias e esforços.</td>
-                            <td class="coluna3"><input class="resposta criatividadeEmpreendedora" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">22</td>
-                            <td class="coluna2">Utilizar minhas habilidades para tornar o mundo um lugar melhor para se viver e trabalhar é mais importante para mim do que alcançar uma posição gerencial de alto nível.</td>
-                            <td class="coluna3"><input class="resposta dedicacaoCausa" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">23</td>
-                            <td class="coluna2">Me sinto mais realizado em minha carreira quando soluciono problemas aparentemente insolúveis ou venço o que aparentemente era impossível de ser vencido.</td>
-                            <td class="coluna3"><input class="resposta desafioPuro" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">24</td>
-                            <td class="coluna2">Me sinto bem-sucedido na vida apenas quando sou capaz de equilibrar minhas necessidades pessoais, familiares e de carreira.</td>
-                            <td class="coluna3"><input class="resposta estiloVida" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">25</td>
-                            <td class="coluna2">Prefiro sair da empresa onde estou a aceitar uma tarefa em esquema rotativo que me afaste da minha área de experiência.</td>
-                            <td class="coluna3"><input class="resposta competenciaTecFuncional" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">26</td>
-                            <td class="coluna2">Me tornar um diretor geral é mais atraente para mim do que me tornar um diretor técnico em minha área de especialização.</td>
-                            <td class="coluna3"><input class="resposta competenciaAdmGeral" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">27</td>
-                            <td class="coluna2">Para mim, poder fazer um trabalho do meu jeito, livre de regras e restrições, é mais importante do que segurança.</td>
-                            <td class="coluna3"><input class="resposta autonomiaIndependencia" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">28</td>
-                            <td class="coluna2">Me sinto mais realizado em meu trabalho quando percebo que tenho total segurança financeira e estabilidade no trabalho.</td>
-                            <td class="coluna3"><input class="resposta segurancaEstabilidade" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">29</td>
-                            <td class="coluna2">Me sinto bem-sucedido em meu trabalho apenas quando posso criar ou construir alguma coisa que seja inteiramente de minha autoria.</td>
-                            <td class="coluna3"><input class="resposta criatividadeEmpreendedora" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">30</td>
-                            <td class="coluna2">Sonho em ter uma carreira que faça uma real contribuição à humanidade e à sociedade.</td>
-                            <td class="coluna3"><input class="resposta dedicacaoCausa" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">31</td>
-                            <td class="coluna2">Procuro oportunidades de trabalho que desafiem fortemente minhas habilidades para solucionar problemas.</td>
-                            <td class="coluna3"><input class="resposta desafioPuro" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">32</td>
-                            <td class="coluna2">Equilibrar as exigências da minha vida pessoal e profissional é mais importante do que alcançar alta posição gerencial.</td>
-                            <td class="coluna3"><input class="resposta estiloVida" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">33</td>
-                            <td class="coluna2">Me sinto plenamente realizado em meu trabalho quando sou capaz de empregar minhas habilidades e talentos especiais.</td>
-                            <td class="coluna3"><input class="resposta competenciaTecFuncional" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">34</td>
-                            <td class="coluna2">Prefiro sair da empresa onde estou a aceitar um cargo que me afaste do caminho da diretoria geral.</td>
-                            <td class="coluna3"><input class="resposta competenciaAdmGeral" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">35</td>
-                            <td class="coluna2">Prefiro sair da empresa onde estou a aceitar um cargo que reduza minha autonomia e liberdade.</td>
-                            <td class="coluna3"><input class="resposta autonomiaIndependencia" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">36</td>
-                            <td class="coluna2">Sonho em ter uma carreira que me dê senso de segurança e estabilidade.</td>
-                            <td class="coluna3"><input class="resposta segurancaEstabilidade" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">37</td>
-                            <td class="coluna2">Sonho em iniciar e montar meu próprio negócio.</td>
-                            <td class="coluna3"><input class="resposta criatividadeEmpreendedora" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">38</td>
-                            <td class="coluna2">Prefiro sair da empresa onde estou a aceitar um cargo que prejudique minha capacidade de ser útil aos outros.</td>
-                            <td class="coluna3"><input class="resposta dedicacaoCausa" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr> 
-                        <tr>
-                            <td class="coluna1">39</td>
-                            <td class="coluna2">Trabalhar em problemas praticamente insolúveis para mim é mais importante do que alcançar uma posição gerencial de alto nível.</td>
-                            <td class="coluna3"><input class="resposta desafioPuro"maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr>
-                        <tr>
-                            <td class="coluna1">40</td>
-                            <td class="coluna2">Sempre procurei oportunidades de trabalho que minimizassem interferências com assuntos pessoais e familiares.</td>
-                            <td class="coluna3"><input class="resposta estiloVida" maxlength="1" type="text"onkeypress="onlynumber();"> </td>
-                        </tr>  
-
-
-                </tbody>        
-            </table>         
-    </main>  
-   
-    
-    <div class="botao"> 
-        <button id="bota_resultado" class="bota_resultado" onclick="Resultado_Avaliacao()">Resultado Avaliação</button>
-    </div> 
-
-    <div class="result_teste"> 
-        <table id="tabela">            
-        </table>
-    </div> 
-    
-    <div id="grafico">
-        
-    </div>     
-      <script src="validacoes.js"></script>
-      <script src="script.js"></script>
+    </header>
+    <script src="validacoes.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
