@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <title>Menu Responsivo</title>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assests/css/reset.css">
     <link rel="stylesheet" href="assests/css/style_index.css">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <title>Site Coachinng Marcus</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>       
 </head>
 <body>
-    <header class="cabecalho">        
-        <div class="cabecalho__menu">
-            <nav class="cabecalho__menu__nav">
-                <ul>
-                    <li class="cabecalho__menu__nav__lista">
-                        <a href="kitchen.html">PRINCIPAL</a>
-                        <a href="ancora_apresentacao.html">TESTES</a>
-                        <a href="contato.html">CONTATO</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="cabecalho__menu__botoes">
-                <a href="https://instagram.com/dragoesaracatuba?utm_medium=copy_link"><i
-                        class="fa-brands fa-instagram-square"></i></a>
-                <a href="www.google.com"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.youtube.com/watch?v=_BPwGlywVqs"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-        </div>
-    </header>
-    <script src="assests/js/validacoes.js"></script>
-    <script src="assests/js/script.js"></script>
+    <header>
+        <div class="center">
+      
+        <nav class="desktop right">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="ancora_apresentacao.html">Teste</a></li>
+                <li><a href="">Serviços</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </nav>
+        <nav class="mobile right">
+            <div class="botao-menu-mobile">
+            <i class="fas fa-bars"></i>
+            </div><!--botao-menu-mobile-->
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="ancora_apresentacao.html">Teste</a></li>
+                <li><a href="">Serviços</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="clear"></div>
+        </div><!--center-->
+    </header> 
+    <script src="assests/js/index.js"></script>    
 </body>
 </html>
